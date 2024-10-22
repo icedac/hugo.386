@@ -792,40 +792,65 @@ h3 {
   line-height: 20px;
 }
 
+h1:before {
+  content: "--==<< ";
+}
+
+h1:after {
+  content: " >>==--";
+}
+
+h2:before {
+  content: "--< ";
+}
+ 
+h2:after {
+  content: " >--";
+}
+
 h3:before {
-  content: ">>> ";
+  content: ">> ";
 }
 
 h3:after {
-  content: " <<<";
+  content: " ";
 }
 
 h1 {
   font-size: 18px;
   text-transform: uppercase;
+  margin-left: 0;
+  color: #ff8000;    /* 유니크/전설 주황색 */
 }
 
 h2 {
   font-size: 18px;
-  text-align: center;
-  white-space: nowrap;
+  margin-left: 20px;
+  color: #a335ee;    /* 에픽 보라색 */
 }
 
 h3 {
   font-size: 18px;
+  margin-left: 40px;
+  color: #0070dd;    /* 레어 파란색 */
 }
 
 h4 {
   font-size: 18px;
-  color: #fe54fe;
+  margin-left: 60px;
+  color: #1eff00;    /* 고급 녹색 */
 }
 
 h5 {
   font-size: 18px;
+  margin-left: 80px;
+  color: #ffffff;    /* 일반 흰색 */
 }
 
 h6 {
   font-size: 18px;
+  margin-left: 100px;
+  color: #9d9d9d;    /* 회색 (추가: 낮은 품질 표현) */
 }
 
 h1 small {
