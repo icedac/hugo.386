@@ -826,7 +826,7 @@ h1 {
 h2 {
   font-size: 18px;
   margin-left: 20px;
-  color: #a335ee;    /* 에픽 보라색 */
+  color: #1eff00;    /* 고급 녹색 */
 }
 
 h3 {
@@ -838,13 +838,13 @@ h3 {
 h4 {
   font-size: 18px;
   margin-left: 60px;
-  color: #1eff00;    /* 고급 녹색 */
+  color: #ffffff;    /* 일반 흰색 */
 }
 
 h5 {
   font-size: 18px;
   margin-left: 80px;
-  color: #ffffff;    /* 일반 흰색 */
+  color: #a335ee;    /* 에픽 보라색 */
 }
 
 h6 {
