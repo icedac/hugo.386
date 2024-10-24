@@ -1,3 +1,5 @@
+
+
 {{ define "main" }}
 
 <div class="row-fluid navmargin">
@@ -7,9 +9,24 @@
     </div>
     <p class="lead">{{ .Params.description }}</p>
     <br/>
+
+    <br/>
     {{ .Content }}
     <h4><a href="{{ .Site.BaseURL }}">{{ i18n "backtohome" }}</a></h4>
 </div>
+
+<a class="btn btn-lg cc-btn-default{{if not .PrevInSection}} disabled{{end}}" href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">이전 글{{if .PrevInSection}} - {{.PrevInSection.Title}}{{end}}</a>
+<a class="btn btn-lg cc-btn-default{{if not .NextInSection}} disabled{{end}}" href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">다음 글{{if .NextInSection}} - {{.NextInSection.Title}}{{end}}</a>
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3>See Also</h3>
+<ul>
+ {{ range . }}
+ <li><a class="btn btn-lg cc-btn-default"href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+ {{ end }}
+</ul>
+{{ end }}
 
 {{- partial "comments.html" . -}}
 
